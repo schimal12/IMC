@@ -8,4 +8,11 @@
     <string name="MaleMain">Male</string>
     <string name="FemaleMain">Female</string>
     <string name="IMCmain">IMC</string>
+    <string name="hintIMC">IMC:</string>
+    <string name="Nombre">Your name:</string>
+    <string name="Ideal">Peso Ideal</string>
+    <string name="Energia">Energy</string>
+    <string name="Peso">YourWeight</string>
+    <string name="PesoSano">Open Healthy Weight</string>
+    <string name="votoporvoto">Recalculate</string>
 </resources>

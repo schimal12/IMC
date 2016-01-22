@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if(((CheckBox)v).isChecked()){
                     String male = "male";
-                    it.putExtra("male",male);
+                    it.putExtra("genre",male);
                 }else{
                     String female = "female";
-                    it.putExtra("female",female);
+                    it.putExtra("genre",female);
                 }
             }
         });
