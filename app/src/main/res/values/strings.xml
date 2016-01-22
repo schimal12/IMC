@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="SplashText">Bienvenido Usuario</string>
+    <string name="NombreMain">Your Name</string>
+    <string name="HeightAltura" />
+    <string name="HeightMain">Your Height</string>
+    <string name="WeightMain">Your Weight</string>
+    <string name="MaleMain">Male</string>
+    <string name="FemaleMain">Female</string>
+    <string name="IMCmain">IMC</string>
+</resources>
