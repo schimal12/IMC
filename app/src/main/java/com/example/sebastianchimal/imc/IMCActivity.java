@@ -33,10 +33,13 @@ public class IMCActivity extends AppCompatActivity {
         Energy = (TextView)findViewById(R.id.textView5);
 
 
+
         weightIMC = Double.parseDouble(getIntent().getStringExtra("weight"));
         heightIMC = Double.parseDouble(getIntent().getStringExtra("height"));
         IMC = (weightIMC/((heightIMC)*(heightIMC)));
         IMCOriginal.setText("IMC: "+IMC.toString());
+
+
 
         nombreIMC = getIntent().getStringExtra("nombre");
         NombreIMC.setText("Nombre: "+nombreIMC);
@@ -44,7 +47,6 @@ public class IMCActivity extends AppCompatActivity {
         pesoIMC.setText("Peso: "+weightIMC.toString());
 
        genre = getIntent().getStringExtra("genre");
-
 
         if(genre.equals("male")){
             if(heightIMC > 1.52){
@@ -54,22 +56,21 @@ public class IMCActivity extends AppCompatActivity {
             }
         }else{
             if(heightIMC > 1.52){
-                pesoIdeal = ""+45+(Math.floor(heightIMC/5)*2.3);
+                pesoIdeal = ""+(heightIMC*heightIMC)*22;
             }else{
-                pesoIdeal = ""+45;
+                pesoIdeal = ""+(heightIMC*heightIMC)*22;
             }
         }
 
         pesoIdealIMC.setText(pesoIdeal);
 
         if(genre.equals("male")){
-            Double tmp = 66+(13.7*weightIMC)+(5*heightIMC)-(6.8*22);
+            Double tmp = Double.parseDouble(pesoIdeal)*30;
             energia =""+tmp;
         }else{
-            Double tmp = 655+(9.6*weightIMC)+(1.8*heightIMC)-(4.7*22);
+            Double tmp = Double.parseDouble(pesoIdeal)*30;
             energia =""+tmp;
         }
-
         Energy.setText(energia);
     }
 }

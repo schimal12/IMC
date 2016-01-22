@@ -13,12 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/NombreMain"
         android:ems="10"
         android:id="@+id/nombre"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp" />
+        android:layout_marginTop="58dp"
+        android:hint="@string/NombreMain" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,8 +30,7 @@
         android:layout_alignLeft="@+id/nombre"
         android:layout_alignStart="@+id/nombre"
         android:layout_marginTop="58dp"
-        android:hint="@string/HeightAltura"
-        android:text="@string/HeightMain" />
+        android:hint="@string/HeightAltura" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -42,7 +41,7 @@
         android:layout_below="@+id/height"
         android:layout_alignLeft="@+id/height"
         android:layout_alignStart="@+id/height"
-        android:text="@string/WeightMain" />
+        android:hint="@string/WeightMain" />
 
     <Button
         android:layout_width="wrap_content"
