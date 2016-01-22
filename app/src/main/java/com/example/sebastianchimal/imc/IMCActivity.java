@@ -6,12 +6,12 @@ import android.widget.TextView;
 
 public class IMCActivity extends AppCompatActivity {
     private String nombreIMC;
-    private String peso;
     private Double IMC;
     private Double weightIMC;
     private Double heightIMC;
     private String genre;
     private String pesoIdeal;
+    private String energia;
 
     private TextView IMCOriginal;
     private TextView NombreIMC;
@@ -57,6 +57,17 @@ public class IMCActivity extends AppCompatActivity {
         }
 
         pesoIdealIMC.setText(pesoIdeal);
+
+        if(genre.equals("male")){
+            Double tmp = 66+(13.7*weightIMC)+(5*heightIMC)-(6.8*22)
+            energia =""+tmp;
+        }else{
+            Double tmp = 655+(9.6*weightIMC)+(1.8*heightIMC)-(4.7*22)
+            energia =""+tmp;
+        }
+
+        Energy.setText(energia);
+
 
 
 
