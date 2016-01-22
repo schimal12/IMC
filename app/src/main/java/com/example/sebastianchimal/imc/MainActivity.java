@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
     public EditText nombreEdit;
     public EditText heightEdit;
     public EditText weightEdit;
-    public CheckBox male;
-    public CheckBox female;
     public Button IMC;
+    public RadioButton maleButton;
+    public RadioButton femaleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         heightEdit = (EditText)findViewById(R.id.height);
         weightEdit = (EditText)findViewById(R.id.weight);
         IMC = (Button)findViewById(R.id.imc);
-        male = (CheckBox)findViewById(R.id.male);
-        female = (CheckBox)findViewById(R.id.female);
+        maleButton = (RadioButton)findViewById(R.id.male);
+        femaleButton = (RadioButton)findViewById(R.id.female);
+
     }
 
     private int VALOR_SUBACTIVIDAD = 5007;
@@ -38,19 +39,13 @@ public class MainActivity extends AppCompatActivity {
         String height = heightEdit.getText().toString();
         String weight = weightEdit.getText().toString();
 
-        male.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(((CheckBox)v).isChecked()){
-                    String male = "male";
-                    it.putExtra("genre",male);
-                }else{
-                    String female = "female";
-                    it.putExtra("genre",female);
-                }
+        if(maleButton.isChecked()){
+            it.putExtra("genre","male");
+        }else {
+            if (femaleButton.isChecked()) {
+                it.putExtra("genre", "female");
             }
-        });
+        }
         it.putExtra("nombre",nombre);
         it.putExtra("height",height);
         it.putExtra("weight",weight);

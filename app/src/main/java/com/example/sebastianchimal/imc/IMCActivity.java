@@ -2,6 +2,7 @@ package com.example.sebastianchimal.imc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class IMCActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class IMCActivity extends AppCompatActivity {
     private TextView pesoIMC;
     private TextView pesoIdealIMC;
     private TextView Energy;
+    private ImageView imagenIMC;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,7 @@ public class IMCActivity extends AppCompatActivity {
 
        genre = getIntent().getStringExtra("genre");
 
+
         if(genre.equals("male")){
             if(heightIMC > 1.52){
                 pesoIdeal = ""+50+(Math.floor(heightIMC/5)*2.3);
@@ -59,18 +63,13 @@ public class IMCActivity extends AppCompatActivity {
         pesoIdealIMC.setText(pesoIdeal);
 
         if(genre.equals("male")){
-            Double tmp = 66+(13.7*weightIMC)+(5*heightIMC)-(6.8*22)
+            Double tmp = 66+(13.7*weightIMC)+(5*heightIMC)-(6.8*22);
             energia =""+tmp;
         }else{
-            Double tmp = 655+(9.6*weightIMC)+(1.8*heightIMC)-(4.7*22)
+            Double tmp = 655+(9.6*weightIMC)+(1.8*heightIMC)-(4.7*22);
             energia =""+tmp;
         }
 
         Energy.setText(energia);
-
-
-
-
-
     }
 }
